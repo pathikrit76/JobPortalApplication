@@ -26,7 +26,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-    show-sql: false
+    show-sql: ${SQL_SHOW:true}
     defer-datasource-initialization: true
   sql:
     init:

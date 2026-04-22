@@ -2,6 +2,7 @@ package com.jobportal.backend.controller;
 
 import com.jobportal.backend.entity.Company;
 import com.jobportal.backend.service.ICompanyService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,12 +12,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/companies")
+@RequiredArgsConstructor
 public class CompanyController {
     private final ICompanyService companyService;
 
-    public CompanyController(ICompanyService companyService) {
-        this.companyService = companyService;
-    }
+//    public CompanyController(ICompanyService companyService) {
+//        this.companyService = companyService;
+//    }
 
     @GetMapping
     public ResponseEntity<List<Company>> getAllCompanies() {
