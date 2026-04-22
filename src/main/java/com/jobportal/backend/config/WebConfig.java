@@ -32,8 +32,8 @@ public class WebConfig implements WebMvcConfigurer {
      * @see PathMatchConfigurer
      * @since 4.0.3
      */
-    @Override
-    public void configurePathMatch(PathMatchConfigurer configurer) {
-        configurer.addPathPrefix("/api",controller -> true);
-    }
+    // @Override
+    // public void configurePathMatch(PathMatchConfigurer configurer) {
+    //     configurer.addPathPrefix("/api",controller -> true);
+    // }
 }
