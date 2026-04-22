@@ -1,6 +1,6 @@
 package com.jobportal.backend.controller;
 
-import com.jobportal.backend.entity.Company;
+import com.jobportal.backend.dto.CompanyDto;
 import com.jobportal.backend.service.ICompanyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class CompanyController {
 //    }
 
     @GetMapping
-    public ResponseEntity<List<Company>> getAllCompanies() {
+    public ResponseEntity<List<CompanyDto>> getAllCompanies() {
         // In a real application, you would fetch this data from the database
         return ResponseEntity.ok(companyService.getAllCompanies());
     }
